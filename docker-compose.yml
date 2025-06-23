@@ -13,11 +13,11 @@ services:
       - dbdata:/var/lib/postgresql/data
 
   app:
-    build:
-      ports:
-        - "8080:8080"
-      depends_on:
-        - db
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
 
 volumes:
   dbdata:
